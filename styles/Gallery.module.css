@@ -1,0 +1,203 @@
+/* .btnsNav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 48px;
+    background-color: blue;
+    z-index: 10
+}
+
+.btnsNav svg,
+.btnsNav button,
+.btnsNav2 button {
+    display: block;
+    width: 48px;
+    border: none;
+    max-height: 48px;
+    color: white;
+    opacity: 0.6;
+}
+
+.btnsNav button {
+    background: none;
+}
+
+.btnsNav2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    height: 48px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+} */
+
+/* 
+.btnReturn svg {
+    overflow: hidden;
+    left: 0;
+    max-width: 36px;
+    max-height: 36px;
+    background-color: aquamarine;
+    z-index: 2;
+    left: 2ch;
+} */
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+.galleryContainer {
+    position: relative;
+    width: 100%;
+    background-color: gray;
+    height: 100vh;
+
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+    padding: 0 20px;
+}
+
+.thumbs {
+    padding: 2% 3%;
+    width: 100px;
+    filter: grayscale(0.5)  blur(0.5px)
+}
+
+.thumbs:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+    box-sizing: border-box;
+    border: 10px solid white;
+    padding: 10px;
+}
+
+
+.btnsNav button, .btnsNav2 button, .btnsNav svg {
+    background: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    opacity: 0.6;
+    /* border: 1px solid red; */
+}
+
+.btnsNav button:hover, .btnsNav2 button:hover, .btnsNav svg:hover {
+ opacity: 1;
+ color: black;
+ transform: scale(1.2);
+}
+
+.btnsNav,
+.btnsNav2 {
+    position: absolute;
+    --iconSize: 24px;
+     width: 100%;
+    height: calc(var(--iconSize) * 1.5);
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1ch;
+    z-index: 20;
+}
+
+
+.btnsNav2 {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.btnsNav *,
+.btnsNav2 * {
+    height: calc(var(--iconSize) * 1.5);
+    width: calc(var(--iconSize) * 1.5);
+    color: white;
+    opacity: 0.8;
+
+}
+
+.btnNav path, .btnsNav2 path {
+    pointer-events: none;
+}
+
+
+.bodyMeasurements {
+    box-shadow: 0px -5px 15px -3px rgba(0,0,0,0.1);
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .galleryContainer {
+        max-width: 60% !important;
+        margin: 0 auto;
+        background-color: blueviolet;
+        z-index: 10;
+    }
+
+
+    .btnsNav,
+.btnsNav2 {
+    height: calc(var(--iconSize) * 2);
+    z-index: 0;
+   
+}
+
+
+    .btnsNav *,
+    .btnsNav2 * {
+        color: black;
+        width: calc(var(--iconSize) * 2);
+        height: calc(var(--iconSize) * 2);
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1920px) {
+    .galleryContainer {
+        max-width: 40% !important;
+        max-height: 100% !important;
+        margin: 1% auto;
+    }
+    .btnsNav *,
+    .btnsNav2 * {
+        color: black;
+        width: calc(var(--iconSize) * 2);
+        height: calc(var(--iconSize) * 2);
+    }
+
+    .btnsNav,
+.btnsNav2 {
+  
+    height: calc(var(--iconSize) * 1.5);  
+    justify-content: space-between;
+    padding: 0 8ch;
+    z-index: 0;
+}
+
+/* .container {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+   top: 0;
+   right: 0;
+    background-color: aqua;
+} */
+}

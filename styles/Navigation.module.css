@@ -1,0 +1,119 @@
+.main {
+    background-color: white;
+    height: 5vh;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.main h3 {
+    display: none;
+}
+
+.hamburger {
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+}
+
+
+.hamburger svg {
+    position: absolute;
+    width: 36px;
+    aspect-ratio: 1/1;
+    top: 10%;
+    left: 2%;
+}
+
+.hamburger path {
+    pointer-events: none;
+}
+
+.links {
+    background-color: white;
+    position: absolute;
+    height: 20vh;
+    width: 95%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 4vh;
+    transition: top 0.5s ease-in-out;
+    box-shadow: inset 0px 7px 11px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+}
+
+.links ul {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+}
+
+.links li {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* padding-bottom: 20px; */
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 33%;
+    margin-top: 20px;
+}
+
+
+
+.links li:active {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.links path {
+    pointer-events: none;
+}
+
+.links:hover .main {
+    background-color: red;
+}
+
+.bnw {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .main {
+        height: 8vh;
+        box-shadow: 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .main h3 {
+        display: block;
+        position: absolute;
+        top: 0;
+        font-family: 'Playfair Display';
+        font-size: 1.2rem;
+        /* letter-spacing: 0.1rem; */
+        text-transform: uppercase;
+        font-weight: 500;
+        color: hsl(0, 0%, 20%);
+        right: 0;
+        transform: translateX(-50%);
+    }
+}
