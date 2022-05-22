@@ -2,7 +2,10 @@
   "name": "totistyle-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://devtoti.github.io/totistyles.github.io/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
