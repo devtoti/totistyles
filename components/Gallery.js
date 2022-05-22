@@ -30,8 +30,8 @@ export default function Gallery({ fetch }) {
   const [currImg, setCurrImg] = useState(showGallery[0].src)
   const [counter, setCounter] = useState(6)
 
-  let filteredImgs = showGallery.map(imgSrc =>
-    <div onClick={() => {
+  let filteredImgs = showGallery.map((imgSrc, id) =>
+    <div key={id} onClick={() => {
       setCurrImg(imgSrc.src)
       setGridView(false)
     }} className={css.thumbs} 

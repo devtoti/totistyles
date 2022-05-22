@@ -37,7 +37,7 @@ export default function Gallery() {
 
 
     const mapBubbles = bubbles.map((bubble, id) => {
-        return <li className="list-bubbles"  name={bubble} onClick={() => handleClick(bubble, setGallery, filterSearch)}
+        return <li className="list-bubbles" key={id + 1} name={bubble} onClick={() => handleClick(bubble, setGallery, filterSearch)}
         >
             <button>
 
@@ -47,7 +47,7 @@ export default function Gallery() {
     })
     const mapImgs = gallery.map((image, id) => {
         // console.log(image);
-        return <div className="gallery-img" onClick={()=> console.log(<Image src={pic01}/>)}>
+        return <div className="gallery-img" key={id} onClick={()=> console.log(<Image src={pic01}/>)}>
             <Image src={image.src}
                 width={100}
                 height={100}
