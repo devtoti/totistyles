@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import landing from '../public/landing.JPG'
+import landing from '../public/landing.jpg'
 import Link from 'next/link'
 import Head from 'next/head'
 export default function HomePage(page) {

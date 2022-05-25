@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import Script from 'next/scipt'
+import Script from 'next/script'
 
 export default function Map() {
 
