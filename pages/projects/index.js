@@ -4,12 +4,13 @@ import Card from '../../components/Card'
 import pic01 from '../../public/gallery/newicon-02.jpg'
 import pic02 from '../../public/gallery/homegym-02.jpg'
 import pic03 from '../../public/gallery/collection-01.jpg'
+import pic04 from '../../public/gallery/collection-04.jpg'
 
 const cardCovers = [
   { title: "agency", description:"under construction", src: pic01, type: "commercial", keyword:"newicon" },
   { title: "homegym", description:"under construction", src: pic02, type: "fitness", keyword:"homegym" },
   { title: "collection", description:"spring photoshoot", src: pic03, type: "editorial", keyword:"collection" },
-  { title: "collection", description:"spring photoshoot", src: pic03, type: "editorial", keyword:"collection" },
+  { title: "collection", description:"spring photoshoot", src: pic04, type: "editorial", keyword:"collection" },
 
 ]
 

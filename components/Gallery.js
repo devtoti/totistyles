@@ -10,7 +10,7 @@ export default function Gallery({ fetch }) {
   const [gridView, setGridView] = useState(false)
   const router = useRouter()
 
-
+  console.log('fetch_', fetch)
 
   // const displayBodyData = Object.keys(bodyData).map(key => {
   //   console.log(key, bodyData[key])
@@ -23,9 +23,19 @@ export default function Gallery({ fetch }) {
   //   </div>
   // })
 
+  // if (fetch == undefined) {
+  //   fetch = "newicon"
+  // }
+  // export async function getServerSideProps(context) {
+  //   return {
+  //     props: {}, // will be passed to the page component as props
+  //   };
+  // }
+
   let galleryCollection = [].concat(homegym, newicon, collection);
   let showGallery = []
-  showGallery = galleryCollection.filter((elem, id) => elem.src.includes(fetch))
+  showGallery = galleryCollection.filter((elem, id) => 
+    elem.src.includes(fetch))
 
   const [currImg, setCurrImg] = useState(showGallery[0].src)
   const [counter, setCounter] = useState(6)
@@ -92,7 +102,7 @@ export default function Gallery({ fetch }) {
 
     <div className={css.galleryContainer} 
     >
-      <Image src={currImg} layout="fill" objectFit="cover" objectPosition="top" />
+      <Image src={currImg} layout="fill" objectFit="cover" objectPosition="top" priority="true" />
 
       {gridView &&
         <div className={css.container}>

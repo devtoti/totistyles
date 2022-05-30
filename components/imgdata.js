@@ -13,6 +13,11 @@ import newicon05 from '../public/gallery/newicon-05.jpg'
 import newicon06 from '../public/gallery/newicon-06.jpg'
 
 import collection01 from '../public/gallery/collection-01.jpg'
+import collection02 from '../public/gallery/collection-02.jpg'
+import collection03 from '../public/gallery/collection-03.jpg'
+import collection04 from '../public/gallery/collection-04.jpg'
+import collection05 from '../public/gallery/collection-05.jpg'
+import collection06 from '../public/gallery/collection-06.jpg'
 
 const homegym = [
 homegym01,
@@ -35,11 +40,11 @@ const newicon = [
 
 const collection = [
     collection01,
-    collection01,
-    collection01,
-    collection01,
-    collection01,
-    collection01,
+    collection02,
+    collection03,
+    collection04,
+    collection05,
+    collection06,
 ]
 
 export {homegym, newicon, collection};

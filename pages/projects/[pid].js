@@ -8,6 +8,8 @@ export default function Project() {
   const { pid } = router.query
   console.log('pid is ' + pid)
 
+
+
   const displayBodyData = Object.keys(bodyData).map((key,id) => {
     console.log(key, bodyData[key])
 
@@ -20,10 +22,9 @@ export default function Project() {
   })
 
 
+
   return (
     <div>
-      {/* <h2>Gallery</h2>
-      <h2>{pid}</h2> */}
       <Gallery fetch={pid} />
       <div className="bodyMeasurements">
       {displayBodyData}
@@ -32,3 +33,19 @@ export default function Project() {
     </div>
   )
 }
+
+
+ export async function getServerSideProps(context) {
+    return {
+      props: {}, // will be passed to the page component as props
+    };
+  }
+
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { ... } }
+//     ],
+//     fallback: true // false or 'blocking'
+//   };
+// }
